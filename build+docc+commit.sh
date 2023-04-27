@@ -10,32 +10,38 @@ cd $DOCC_BRANCH_NAME #move to worktree directory to create all files there
 # # Pretty print DocC JSON output so that it can be consistently diffed between commits
 export DOCC_JSON_PRETTYPRINT="YES"
 
-rm -rf $DOCC_DATA
+# rm -rf $DOCC_DATA
 
-xcodebuild \
--derivedDataPath $DOCC_DATA \
--scheme $TARGET_NAME \
--destination 'platform=iOS Simulator,name=iPhone 14' \
--parallelizeTargets \
-docbuild
+# xcodebuild \
+# -derivedDataPath $DOCC_DATA \
+# -scheme $TARGET_NAME \
+# -destination 'platform=iOS Simulator,name=iPhone 14' \
+# -parallelizeTargets \
+# docbuild
+swift package --allow-writing-to-directory $DOCC_OUTPUT_FOLDER \
+    generate-documentation --target $TARGET_NAME \
+    --disable-indexing \
+    --transform-for-static-hosting \
+    --hosting-base-path $LOWERCASE_TARGET_NAME \
+    --output-path $DOCC_OUTPUT_FOLDER
 
-mkdir $DOCC_ARCHIVE
+# mkdir $DOCC_ARCHIVE
 
-cp -R `find ${DOCC_DATA} -type d -name '*.doccarchive'` $DOCC_ARCHIVE
+# cp -R `find ${DOCC_DATA} -type d -name '*.doccarchive'` $DOCC_ARCHIVE
 
-mkdir $DOCC_OUTPUT_FOLDER
+# mkdir $DOCC_OUTPUT_FOLDER
 
-for ARCHIVE in $DOCC_ARCHIVE/*.doccarchive; do
-    cmd() {
-        echo "$ARCHIVE" | awk -F'.' '{print $1}' | awk -F'/' '{print tolower($2)}'
-    }
-    ARCHIVE_NAME="$(cmd)"
-    echo "Processing Archive: $ARCHIVE"
-    $(xcrun --find docc) process-archive \
-    transform-for-static-hosting "$ARCHIVE" \
-    --hosting-base-path $LOWERCASE_TARGET_NAME/$ARCHIVE_NAME \
-    --output-path $DOCC_OUTPUT_FOLDER/$ARCHIVE_NAME
-done
+# for ARCHIVE in $DOCC_ARCHIVE/*.doccarchive; do
+#     cmd() {
+#         echo "$ARCHIVE" | awk -F'.' '{print $1}' | awk -F'/' '{print tolower($2)}'
+#     }
+#     ARCHIVE_NAME="$(cmd)"
+#     echo "Processing Archive: $ARCHIVE"
+#     $(xcrun --find docc) process-archive \
+#     transform-for-static-hosting "$ARCHIVE" \
+#     --hosting-base-path $LOWERCASE_TARGET_NAME/$ARCHIVE_NAME \
+#     --output-path $DOCC_OUTPUT_FOLDER/$ARCHIVE_NAME
+# done
 
 cp images/icon.png $DOCC_OUTPUT_FOLDER/$TARGET_NAME/favicon.ico
 cp images/icon.svg $DOCC_OUTPUT_FOLDER/$TARGET_NAME/favicon.svg
