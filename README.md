@@ -1,5 +1,6 @@
 # Addtitive
-# A set of protocols to ease using dependency injection for unit-testing purposes.
+A set of protocols to ease using dependency injection for unit-testing purposes.
+
 <img src="https://github.com/hamed8080/mocks/raw/main/images/icon.png"  width="146" height="146">
 
 ## Features
