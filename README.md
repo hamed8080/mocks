@@ -32,9 +32,8 @@ pod 'Mocks', :git => 'http://pubgi.fanapsoft.ir/chat/ios/mocks.git', :tag => '1.
 ```
 <br/>
 
-## [Documentation](https://hamed8080.github.io/mocks/mocks/documentation/mocks/)
-For more information about how to use Mocks visit [Documentation](https://hamed8080.github.io/mocks/mocks/documentation/mocks/) 
-<br/>
+## [Documentation](https://hamed8080.github.io/mocks/documentation/mocks/)
+For more information about how to use Mocks visit [Documentation](https://hamed8080.github.io/mocks/documentation/mocks/) 
 <br/>
 
 ## Contributing to Mocks
