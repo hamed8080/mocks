@@ -70,6 +70,83 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "MockTimer",
+          "level" : 2,
+          "text" : "MockTimer",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For mocking the timer class just inject an instance of type ",
+              "type" : "text"
+            },
+            {
+              "code" : "Additive.TimerProtocol",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " like code below:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "final class ViewModel {",
+            "    let timer: TimerProtocol",
+            "    init(timer: TimerProtocol) {",
+            "        self.timer = timer",
+            "    }   ",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Then you have the power to control this instance variable with ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/Mocks\/documentation\/Mocks\/MockTimer",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " like:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "final class TestViewModel: XCTestCase {",
+            "    var mockTimer: MockTimer!",
+            "    override func setUp() {",
+            "        mockTimer = MockTimer()",
+            "    }",
+            "",
+            "    func test_timer() {",
+            "        mockTimer.blockResult = { timer in",
+            "            XCTAssertTrue(true)",
+            "        }",
+            "        mockTimer.fire()",
+            "    }",
+            "}"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "relationshipsSections" : [
@@ -140,6 +217,12 @@
     }
   ],
   "identifier" : "doc:\/\/Mocks\/documentation\/Mocks",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
   "kind" : "symbol",
   "role" : "collection",
   "title" : "Mocks",
@@ -430,6 +513,20 @@
   "title" : "scheduledTimer(interval:repeats:block:)",
   "type" : "topic",
   "url" : "\/documentation\/mocks\/mocktimer\/scheduledtimer(interval:repeats:block:)"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
 }
 }
 }

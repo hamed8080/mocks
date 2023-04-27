@@ -119,6 +119,12 @@
     }
   ],
   "identifier" : "doc:\/\/Mocks\/documentation\/Mocks",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
   "kind" : "symbol",
   "role" : "collection",
   "title" : "Mocks",
@@ -184,6 +190,20 @@
   "title" : "resume()",
   "type" : "topic",
   "url" : "\/documentation\/mocks\/mockurlsessiondatatask\/resume()"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
 }
 }
 }

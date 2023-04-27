@@ -140,6 +140,12 @@
     }
   ],
   "identifier" : "doc:\/\/Mocks\/documentation\/Mocks",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
   "kind" : "symbol",
   "role" : "collection",
   "title" : "Mocks",
@@ -414,6 +420,20 @@
   "title" : "response",
   "type" : "topic",
   "url" : "\/documentation\/mocks\/mockurlsession\/response"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
 }
 }
 }

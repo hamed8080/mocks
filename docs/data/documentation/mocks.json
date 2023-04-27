@@ -19,9 +19,25 @@
   "kind" : "symbol",
   "metadata" : {
     "externalID" : "Mocks",
+    "images" : [
+      {
+        "identifier" : "icon.png",
+        "type" : "icon"
+      }
+    ],
     "modules" : [
       {
         "name" : "Mocks"
+      }
+    ],
+    "platforms" : [
+      {
+        "introducedAt" : "10.0",
+        "name" : "iOS"
+      },
+      {
+        "introducedAt" : "12",
+        "name" : "macOS"
       }
     ],
     "role" : "collection",
@@ -29,28 +45,6 @@
     "symbolKind" : "module",
     "title" : "Mocks"
   },
-  "primaryContentSections" : [
-    {
-      "content" : [
-        {
-          "anchor" : "overview",
-          "level" : 2,
-          "text" : "Overview",
-          "type" : "heading"
-        },
-        {
-          "inlineContent" : [
-            {
-              "identifier" : "icon.png",
-              "type" : "image"
-            }
-          ],
-          "type" : "paragraph"
-        }
-      ],
-      "kind" : "content"
-    }
-  ],
   "schemaVersion" : {
     "major" : 0,
     "minor" : 3,
@@ -91,6 +85,12 @@
     }
   ],
   "identifier" : "doc:\/\/Mocks\/documentation\/Mocks",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
   "kind" : "symbol",
   "role" : "collection",
   "title" : "Mocks",
@@ -191,7 +191,7 @@
   "url" : "\/documentation\/mocks\/mockurlsessiondatatask"
 },
 "icon.png": {
-  "alt" : "icon",
+  "alt" : "App icon.",
   "identifier" : "icon.png",
   "type" : "image",
   "variants" : [

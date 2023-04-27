@@ -224,6 +224,12 @@
     }
   ],
   "identifier" : "doc:\/\/Mocks\/documentation\/Mocks",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
   "kind" : "symbol",
   "role" : "collection",
   "title" : "Mocks",
@@ -329,6 +335,20 @@
   "title" : "dataTask(_:completionHandler:)",
   "type" : "topic",
   "url" : "\/documentation\/mocks\/mockurlsession\/datatask(_:completionhandler:)"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
 }
 }
 }

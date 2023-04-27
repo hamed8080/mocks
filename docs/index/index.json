@@ -127,11 +127,28 @@
             "type" : "class"
           }
         ],
+        "icon" : "icon.png",
         "path" : "\/documentation\/mocks",
         "title" : "Mocks",
         "type" : "module"
       }
     ]
+  },
+  "references" : {
+    "icon.png" : {
+      "alt" : "App icon.",
+      "identifier" : "icon.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/icon.png"
+        }
+      ]
+    }
   },
   "schemaVersion" : {
     "major" : 0,
