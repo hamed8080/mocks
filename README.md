@@ -2,6 +2,7 @@
 
 <h5>A set of protocols to ease using dependency injection for unit-testing purposes.</h5>
 
+<p style='text-align: justify;'></p>
 <img src="https://github.com/hamed8080/mocks/raw/main/images/icon.png"  width="146" height="146">
 
 ## Features

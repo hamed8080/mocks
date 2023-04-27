@@ -19,6 +19,7 @@ let package = Package(
     dependencies: [
 //        .package(path: "../Additive"),
                 .package(url: "http://pubgi.fanapsoft.ir/chat/ios/additive.git", exact: "1.0.1"),
+                .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     ],
     targets: [
         .target(
