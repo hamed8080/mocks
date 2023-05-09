@@ -1,3 +1,9 @@
+//
+// HTTPURLResponse.swift
+// Copyright (c) 2022 Mocks
+//
+// Created by Hamed Hosseini on 12/14/22
+
 import Foundation
 import Additive
 

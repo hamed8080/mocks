@@ -17,14 +17,15 @@ let package = Package(
             targets: ["Mocks"]),
     ],
     dependencies: [
-//        .package(path: "../Additive"),
-                .package(url: "http://pubgi.fanapsoft.ir/chat/ios/additive.git", exact: "1.0.1"),
-                .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+        .package(path: "../Additive"),
+        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     ],
     targets: [
         .target(
             name: "Mocks",
-            dependencies: [.product(name: "Additive", package: "additive")]
+            dependencies: [
+                "Additive"
+            ]
         ),
     ]
 )
