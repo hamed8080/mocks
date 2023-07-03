@@ -9,6 +9,7 @@ import Additive
 open class MockURLSessionDataTask: URLSessionDataTaskProtocol {
     private (set) var resumeWasCalled = false
     private (set) var cancelWasCalled = false
+    private (set) var suspendWasCalled = false
 
     public func resume() {
         resumeWasCalled = true
@@ -16,5 +17,9 @@ open class MockURLSessionDataTask: URLSessionDataTaskProtocol {
 
     public func cancel() {
         cancelWasCalled = true
+    }
+
+    public func suspend() {
+        suspendWasCalled = true
     }
 }
