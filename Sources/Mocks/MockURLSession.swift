@@ -49,7 +49,7 @@ open class MockURLSession: URLSessionProtocol {
         return nextDataTask
     }
     
-    public func uploadTask(_ request: URLRequest, _ body: Data, _ completion: @escaping ((Data?, URLResponse?, Error?) -> Void)) -> URLSessionDataTaskProtocol {
+    public func uploadTask(_ request: URLRequest, _ completion: @escaping ((Data?, URLResponse?, Error?) -> Void)) -> URLSessionDataTaskProtocol {
         self.request = request
         self.uploadCompleitonHandler = completion
         return nextDataTask
