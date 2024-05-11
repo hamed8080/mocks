@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Mocks"
-  s.version      = "1.0.1"
+  s.version      = "1.2.0"
   s.summary      = "Mocks"
   s.description  = "Mocks is a set of extensions over some primitive swift classes."
   s.homepage     = "https://pubgi.fanapsoft.ir/chat/ios/mocks"
@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://pubgi.fanapsoft.ir/chat/ios/mocks", :tag => s.version }
   s.source_files = "Sources/Mocks/**/*.{h,swift,xcdatamodeld,m,momd}"
   s.frameworks  = "Foundation" , "CoreData"
-  s.dependency "Additive" , '~> 1.0.1'
+  s.dependency "Additive" , '~> 1.2.0'
 end
