@@ -1,4 +1,4 @@
-# Addtitive
+# Mocks
 
 <h5>A set of protocols to ease using dependency injection for unit-testing purposes.</h5>
 
@@ -20,7 +20,7 @@
 Add in `Package.swift` or directly in `Xcode Project dependencies` section:
 
 ```swift
-.package(url: "https://github.com/hamed8080/mocks.git", .upToNextMinor(from: "1.0.1")),
+.package(url: "https://pubgi.sanpod.ir/chat/ios/mocks.git", .upToNextMinor(from: "1.2.1")),
 ```
 
 #### [CocoaPods](https://cocoapods.org) 
@@ -28,7 +28,7 @@ Add in `Package.swift` or directly in `Xcode Project dependencies` section:
 Add in `Podfile`:
 
 ```ruby
-pod 'Mocks', :git => 'http://pubgi.fanapsoft.ir/chat/ios/mocks.git', :tag => '1.0.1'
+pod 'Mocks', :git => 'https://pubgi.sanpod.ir/chat/ios/mocks.git', :tag => '1.2.1'
 ```
 <br/>
 
