@@ -3,6 +3,18 @@
 
 import PackageDescription
 
+let useLocalDependency = true
+
+let local: [Package.Dependency] = [
+    .package(path: "../Additive"),
+    .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+]
+
+let remote: [Package.Dependency] = [
+    .package(url: "https://pubgi.sandpod.ir/chat/ios/additive", from: "1.2.2"),
+    .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+]
+
 let package = Package(
     name: "Mocks",
     defaultLocalization: "en",
@@ -16,17 +28,12 @@ let package = Package(
             name: "Mocks",
             targets: ["Mocks"]),
     ],
-    dependencies: [
-//        .package(url: "https://pubgi.sandpod.ir/chat/ios/additive", from: "1.2.2"),
-        .package(path: "../Additive"),
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-    ],
+    dependencies: useLocalDependency ? local : remote,
     targets: [
         .target(
             name: "Mocks",
             dependencies: [
-//                .product(name: "Additive", package: "additive")
-                .product(name: "Additive", package: "Additive")
+                .product(name: "Additive", package: useLocalDependency ? "Additive" : "additive")
             ]
         ),
     ]
