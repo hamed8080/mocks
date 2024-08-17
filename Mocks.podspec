@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Mocks"
-  s.version      = "1.2.3"
+  s.version      = "1.2.4"
   s.summary      = "Mocks"
   s.description  = "Mocks is a set of extensions over some primitive swift classes."
   s.homepage     = "https://pubgi.sandpod.ir/chat/ios/mocks"
